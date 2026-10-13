@@ -1,0 +1,234 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-block {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1a365d;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 5px;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN SEMÁNTICA
+   ========================================================================== */
+#main-header {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+#logo {
+    display: inline-block;
+    font-size: 24px;
+}
+
+#navbar {
+    display: inline-block;
+    float: right; /* Alineación a la derecha del menú */
+}
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Transiciones CSS en Enlaces del Menú */
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    color: #1a365d;
+    background-color: #e2e8f0;
+}
+
+/* ==========================================================================
+   3. MAQUETACIÓN CON CAJAS FLOTANTES (div y float) [REQUERIMIENTO]
+   ========================================================================== */
+.row-float {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Distribución inicial en Escritorio (3 Columnas para proyectos) */
+.card-box {
+    width: 31.33%;
+    float: left;
+    margin-right: 2%;
+    background-color: #edf2f7;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid #3182ce;
+    /* Transición suave para efectos visuales */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Eliminar el margen derecho de la última caja de la fila */
+.card-box:last-child {
+    margin-right: 0;
+}
+
+/* Limpieza de flujos CSS obligatoria */
+.clear-fix {
+    clear: both;
+}
+
+/* ==========================================================================
+   4. ANIMACIONES Y EFECTOS HOVER (Transform, Transition y Keyframes)
+   ========================================================================== */
+/* Efecto hover con Transformación Escala */
+.card-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Animación de botones usando Transiciones */
+.btn-action {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-action:hover {
+    background-color: #2b6cb0;
+}
+
+/* ==========================================================================
+   5. SECCIÓN MULTIMEDIA (Distribución en 2 columnas flotantes)
+   ========================================================================== */
+.media-box {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+    padding: 15px;
+}
+
+.media-box:last-child {
+    margin-right: 0;
+}
+
+.audio-player {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Adaptación del iframe responsive */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    margin-top: 15px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA
+   ========================================================================== */
+#main-footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   7. DISEÑO RESPONSIVO (MEDIA QUERIES) [REQUERIMIENTO]
+   ========================================================================== */
+
+/* Reglas aplicadas a Pantallas Móviles (Menores a 768px) */
+@media (max-width: 767px) {
+    #navbar {
+        display: block;
+        float: none;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    #navbar ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    #logo {
+        display: block;
+        text-align: center;
+    }
+
+    /* Rompemos el float para que las cajas se apilen verticalmente en móviles */
+    .card-box {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .media-box {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Reglas aplicadas a Pantallas de Escritorio (Mayores o iguales a 768px) */
+@media (min-width: 768px) {
+    /* Mantiene la rejilla y alineaciones nativas de columnas anchas descritas arriba */
+    body {
+        font-size: 16px;
+    }
+}
