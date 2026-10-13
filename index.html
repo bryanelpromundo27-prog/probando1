@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Optimización SEO Básica y Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional | Diseñador & Desarrollador Web</title>
+    <meta name="description" content="Portafolio profesional de desarrollo y diseño web. Explora mis proyectos multimedia, habilidades técnicas y servicios de ingeniería.">
+    <meta name="keywords" content="Diseño Web, HTML5, CSS3, Portafolio, Scrum, Animaciones, Desarrollador Web, UCH">
+    <meta name="author" content="Tu Apellido">
+    
+    <!-- Vinculación de la Hoja de Estilos Externa -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Estructura Semántica - Encabezado del Sitio -->
+    <header id="main-header">
+        <div class="container">
+            <h1 id="logo">Mi Portafolio</h1>
+            <!-- Menú de Navegación con Enlaces Relativos -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#multimedia" class="nav-link">Multimedia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        
+        <!-- Sección de Bienvenida -->
+        <section id="inicio" class="section-block">
+            <h2>Bienvenido a mi sitio web</h2>
+            <p>Este espacio digital ha sido diseñado aplicando tecnologías modernas de maquetación semántica, estilos interactivos avanzados y optimización en motores de búsqueda.</p>
+        </section>
+
+        <!-- Sección Principal Maquetada con Cajas Flotantes (float) -->
+        <section id="proyectos" class="section-block">
+            <h2>Mis Proyectos de Diseño Web</h2>
+            <p>Presentación de servicios organizados estructuralmente a través de contenedores flotantes:</p>
+            
+            <!-- Fila de Bloques Flotantes -->
+            <div class="row-float">
+                <div class="card-box">
+                    <h3>Diseño UI/UX</h3>
+                    <p>Modelado preliminar a través de Wireframes eficaces para agilizar las fases del ciclo de vida del software antes del código de producción.</p>
+                    <button class="btn-action">Saber Más</button>
+                </div>
+                
+                <div class="card-box">
+                    <h3>Desarrollo Frontend</h3>
+                    <p>Maquetación estricta utilizando semántica de bloques nativos en HTML5 combinados con hojas de estilo CSS3 externas estructuradas.</p>
+                    <button class="btn-action">Saber Más</button>
+                </div>
+                
+                <div class="card-box">
+                    <h3>Metodologías Ágiles</h3>
+                    <p>Integración de marcos de trabajo como Scrum para garantizar incrementos de valor constantes y software funcional por cada Sprint.</p>
+                    <button class="btn-action">Saber Más</button>
+                </div>
+            </div>
+            <!-- Limpieza de flujos obligatorio para diseño de cajas flotantes antiguos -->
+            <div class="clear-fix"></div>
+        </section>
+
+        <!-- Sección de Recursos Multimedia e Integración -->
+        <section id="multimedia" class="section-block">
+            <h2>Galería e Integración Multimedia</h2>
+            <p>Demostración práctica del manejo de recursos locales e incrustaciones de terceros en HTML5:</p>
+            
+            <div class="row-float">
+                <!-- Columna 1: Audio Local -->
+                <div class="media-box">
+                    <h3>Reproductor de Audio Nativo</h3>
+                    <p>Controlador de audio optimizado incrustado localmente:</p>
+                    <!-- Nota: Reemplazar 'audio/musica.mp3' por un archivo real en tu entrega local si es necesario -->
+                    <audio controls class="audio-player">
+                        <source src="audio/listen/815245" type="audio/mpeg" alt="myordina">
+                        Tu navegador no soporta el elemento de reproducción de audio.
+                    <h6>Solo es un ejemplo de reproductor de audio... no hay audio.</h6>
+                    </audio>
+                </div>
+
+                <!-- Columna 2: iframe Externo Obligatorio (YouTube) -->
+                <div class="media-box">
+                    <h3>Video Incrustado (YouTube iframe)</h3>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/watch?v=J2X5mJ3HDYE&list=RDJ2X5mJ3HDYE&start_radio=1&pp=ygUNbmNzIGludmlzaWJsZaAHAQ%3D%3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h6>El video de YouTube es muy probable que no procese :(</h6>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </section>
+
+    </main>
+
+    <!-- Estructura Semántica - Pie de Página -->
+    <footer id="main-footer">
+        <div class="container">
+            <p>&copy; 2026 - Examen Parcial de Diseño Web | Universidad de Ciencias y Humanidades (UCH)</p>
+            <p>Desarrollado por el estudiante de Ingeniería de Sistemas e Informática.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
